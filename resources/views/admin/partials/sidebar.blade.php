@@ -34,7 +34,7 @@
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="{{ route('admin.comment') }}" class="menu-link {{ Request::is('admin/comment') ? 'active' : '' }}">
+                        <a href="{{ route('admin.student_comment') }}" class="menu-link {{ Request::is('admin/student-comment') ? 'active' : '' }}">
                             Nhận xét
                         </a>
                     </li>
