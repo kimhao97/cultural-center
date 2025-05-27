@@ -13,3 +13,4 @@ Route::get('/admin', [DashboardController::class, 'index'])->name('admin.dashboa
 Route::get('/admin/course', [CourseController::class, 'index'])->name('admin.course');
 Route::get('/admin/classroom', [ClassroomController::class, 'index'])->name('admin.classroom');
 Route::get('/admin/student-comment', [StudentCommentController::class, 'index'])->name('admin.student_comment');
+Route::post('/admin/student-comment', [StudentCommentController::class, 'store'])->name('admin.student_comment.store');

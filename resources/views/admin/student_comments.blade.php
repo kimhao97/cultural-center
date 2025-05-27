@@ -65,8 +65,8 @@
                                                         <label class="position-relative top-2 ms-1" for="flexCheckDefault12">#854</label>
                                                     </div>
                                                 </td>
-                                                <td>{{ $comment->name }}</td>
-                                                <td>{{ $comment->comment }}</td>
+                                                <td>{{ $comment->student_name }}</td>
+                                                <td>{{ $comment->content }}</td>
                                                 <td><img src="{{ $comment->avatar }}" alt="Avatar" class="rounded-circle" style="width: 50px; height: 50px;"></td>
                                                 <td class="text-body">({{ $comment->created_at->format('d M Y') }})</td>
                                                 <td>

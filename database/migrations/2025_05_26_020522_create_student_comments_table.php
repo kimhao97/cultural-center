@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('student_name');
             $table->string('content');
             $table->string('avatar_url')->nullable();
-            $table->unsignedBigInteger('created_by');
+            $table->unsignedBigInteger('created_by')->nullable();
             $table->timestamps();
 
             $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
