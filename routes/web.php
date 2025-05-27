@@ -14,3 +14,4 @@ Route::get('/admin/course', [CourseController::class, 'index'])->name('admin.cou
 Route::get('/admin/classroom', [ClassroomController::class, 'index'])->name('admin.classroom');
 Route::get('/admin/student-comment', [StudentCommentController::class, 'index'])->name('admin.student_comment');
 Route::post('/admin/student-comment', [StudentCommentController::class, 'store'])->name('admin.student_comment.store');
+Route::delete('/admin/student-comment/{id}', [StudentCommentController::class, 'destroy'])->name('admin.student_comment.destroy');

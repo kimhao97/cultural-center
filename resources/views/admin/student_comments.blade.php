@@ -74,9 +74,13 @@
                                                         <button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
                                                             <i class="material-symbols-outlined fs-16 text-body">edit</i>
                                                         </button>
-                                                        <button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
-                                                            <i class="material-symbols-outlined fs-16 text-danger">delete</i>
-                                                        </button>
+                                                        <form action="{{ route('admin.student_comment.destroy', $comment->id) }}" method="post">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
+                                                                <i class="material-symbols-outlined fs-16 text-danger">delete</i>
+                                                            </button>
+                                                        </form>
                                                     </div>
                                                 </td> 
                                             </tr>

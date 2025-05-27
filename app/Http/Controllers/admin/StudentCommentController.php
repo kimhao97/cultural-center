@@ -31,5 +31,12 @@ class StudentCommentController extends Controller
         $comment->save();
 
         return redirect()->route('admin.student_comment')->with('success', 'Comment created successfully');
-    }   
+    } 
+
+    public function destroy($id)
+    {
+        $comment = StudentComment::find($id);
+        $comment->delete();
+        return redirect()->route('admin.student_comment')->with('success', 'Comment deleted successfully');
+    }
 }
