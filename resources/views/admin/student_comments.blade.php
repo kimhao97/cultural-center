@@ -56,6 +56,7 @@
                                                 <th scope="col">Action</th>
                                             </tr>
                                         </thead>
+                                        @foreach ($comments as $comment)
                                         <tbody>
                                             <tr>
                                                 <td class="text-body">
@@ -64,12 +65,10 @@
                                                         <label class="position-relative top-2 ms-1" for="flexCheckDefault12">#854</label>
                                                     </div>
                                                 </td>
-                                                <td>Nguyễn Văn A</td>
-                                                <td>Lớp học rất vui!</td>
-                                                <td>
-                                                    <!-- <img src="https://via.placeholder.com/150" alt="Avatar" class="rounded-circle" style="width: 50px; height: 50px;"> -->
-                                                </td>
-                                                <td class="text-body">30 Apr 2024</td>
+                                                <td>{{ $comment->name }}</td>
+                                                <td>{{ $comment->comment }}</td>
+                                                <td><img src="{{ $comment->avatar }}" alt="Avatar" class="rounded-circle" style="width: 50px; height: 50px;"></td>
+                                                <td class="text-body">({{ $comment->created_at->format('d M Y') }})</td>
                                                 <td>
                                                     <div class="d-flex align-items-center gap-1">
                                                         <button class="ps-0 border-0 bg-transparent lh-1 position-relative top-2">
@@ -82,11 +81,12 @@
                                                 </td> 
                                             </tr>
                                         </tbody>
+                                        @endforeach
                                     </table>
                                 </div>
                                 <div class="p-4 pt-lg-4">
                                     <div class="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap">
-                                        <span class="fs-12 fw-medium">Showing 10 of 30 Results</span>
+                                        <span class="fs-12 fw-medium">Showing {{ $comments->count() }} of {{ $comments->total() }} Results</span>
         
                                         <nav aria-label="Page navigation example">
                                             <ul class="pagination mb-0 justify-content-center">
